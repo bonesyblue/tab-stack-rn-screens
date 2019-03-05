@@ -5,7 +5,8 @@ import { useScreens } from "react-native-screens";
 import NavigationService from "./navigators/NavigationService";
 import BottomTab from "./navigators/BottomTab";
 
-useScreens();
+// Uncomment to use react-native-screens
+// useScreens();
 
 const AppContainer = createAppContainer(BottomTab);
 
