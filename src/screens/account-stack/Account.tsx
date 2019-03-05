@@ -1,5 +1,4 @@
 import React from "react";
-import { Surface } from "react-native-paper";
 import { ProfileBanner, PostFeed } from "../common";
 import { IUser, IPost } from "../../api/PlaceholderTypes";
 import { api } from "../../api/PlaceholderApi";
@@ -28,13 +27,13 @@ class Account extends React.Component<{}, IState> {
     if (!this.state.profile) return null;
 
     return (
-      <Surface style={{ flex: 1 }}>
+      <View style={{ flex: 1 }}>
         <PostFeed
           data={this.state.profileFeed}
           headerComponent={<ProfileBanner profile={this.state.profile} />}
           onPostPress={this.handlePostPress}
         />
-      </Surface>
+      </View>
     );
   }
 

@@ -18,9 +18,7 @@ export const ProfileBanner: React.StatelessComponent<ProfileBannerProps> = ({
   const [firstName, lastName] = profile.name.split(" ");
 
   return (
-    <Surface
-      style={{ alignSelf: "stretch", padding: 16, alignItems: "center" }}
-    >
+    <View style={{ alignSelf: "stretch", padding: 16, alignItems: "center" }}>
       <FallbackAvatar firstName={firstName} lastName={lastName} />
       <Title>{profile.name}</Title>
       <ProfileLocation
@@ -28,6 +26,6 @@ export const ProfileBanner: React.StatelessComponent<ProfileBannerProps> = ({
           profile.address.city
         }`}
       />
-    </Surface>
+    </View>
   );
 };

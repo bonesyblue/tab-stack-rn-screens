@@ -1,5 +1,5 @@
 import React from "react";
-import { TouchableOpacity } from "react-native";
+import { TouchableOpacity, View } from "react-native";
 import { Card, Title, Paragraph, Text } from "react-native-paper";
 import { FallbackAvatar } from "./FallbackAvatar";
 import { IUser } from "../../api/PlaceholderTypes";
@@ -19,35 +19,37 @@ export class Post extends React.Component<IComponentProps> {
     const { onPress, title, body, disabled, showAuthor, author } = this.props;
 
     return (
-      <TouchableOpacity onPress={onPress} disabled={disabled}>
-        <Card style={{ alignSelf: "stretch" }}>
-          <Card.Content>
-            <Title numberOfLines={1} ellipsizeMode={"tail"}>
-              {title}
-            </Title>
-            <Paragraph>{body}</Paragraph>
-            {showAuthor && author && (
-              <TouchableOpacity
-                onPress={this.onAuthorPress}
-                style={{
-                  flexDirection: "row",
-                  alignItems: "center",
-                  marginVertical: 8
-                }}
-              >
-                <FallbackAvatar
-                  diameter={44}
-                  firstName={author.name.split(" ")[0]}
-                  lastName={author.name.split(" ")[1]}
-                />
-                <Text style={{ marginLeft: 8 }}>{`by ${
-                  author.name.split(" ")[0]
-                } ${author.name.split(" ")[1]}`}</Text>
-              </TouchableOpacity>
-            )}
-          </Card.Content>
-        </Card>
-      </TouchableOpacity>
+      <View style={{ padding: 8 }}>
+        <TouchableOpacity onPress={onPress} disabled={disabled}>
+          <Card style={{ alignSelf: "stretch" }}>
+            <Card.Content>
+              <Title numberOfLines={1} ellipsizeMode={"tail"}>
+                {title}
+              </Title>
+              <Paragraph>{body}</Paragraph>
+              {showAuthor && author && (
+                <TouchableOpacity
+                  onPress={this.onAuthorPress}
+                  style={{
+                    flexDirection: "row",
+                    alignItems: "center",
+                    marginVertical: 8
+                  }}
+                >
+                  <FallbackAvatar
+                    diameter={44}
+                    firstName={author.name.split(" ")[0]}
+                    lastName={author.name.split(" ")[1]}
+                  />
+                  <Text style={{ marginLeft: 8 }}>{`by ${
+                    author.name.split(" ")[0]
+                  } ${author.name.split(" ")[1]}`}</Text>
+                </TouchableOpacity>
+              )}
+            </Card.Content>
+          </Card>
+        </TouchableOpacity>
+      </View>
     );
   }
 

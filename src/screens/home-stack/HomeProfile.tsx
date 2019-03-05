@@ -29,13 +29,13 @@ export class HomeProfile extends React.Component<HomeProfileProps, IState> {
     if (!this.state.profile) return null;
 
     return (
-      <Surface style={{ flex: 1 }}>
+      <View style={{ flex: 1 }}>
         <PostFeed
           data={this.state.profileFeed}
           headerComponent={<ProfileBanner profile={this.state.profile} />}
           onPostPress={this.handlePostPress}
         />
-      </Surface>
+      </View>
     );
   }
 

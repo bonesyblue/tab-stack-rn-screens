@@ -10,6 +10,7 @@ import { IPost, IComment, IUser } from "../../api/PlaceholderTypes";
 import { Post } from "./Post";
 import { Surface } from "react-native-paper";
 import { CommentList } from "./CommentList";
+import { View } from "react-native";
 
 interface IComponentProps {
   onAuthorPress: (userId: number) => void;
@@ -48,7 +49,7 @@ class Detail extends React.Component<DetailProps, IState> {
     const { author } = this.state;
 
     return (
-      <Surface>
+      <View>
         <CommentList
           headerComponent={
             <Post
@@ -62,7 +63,7 @@ class Detail extends React.Component<DetailProps, IState> {
           }
           data={this.state.comments}
         />
-      </Surface>
+      </View>
     );
   }
 

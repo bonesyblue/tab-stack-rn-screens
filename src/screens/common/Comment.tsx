@@ -16,17 +16,25 @@ export const Comment: React.StatelessComponent<IComponentProps> = ({
   body
 }) => {
   return (
-    <View style={{ flexDirection: "row", paddingHorizontal: 16 }}>
+    <View style={{ flexDirection: "row", paddingHorizontal: 24 }}>
       <FallbackAvatar
         firstName={author.firstName}
         lastName={author.lastName}
         diameter={44}
       />
-      <Card style={{ alignSelf: "stretch" }}>
-        <Card.Content>
-          <Paragraph>{body}</Paragraph>
-        </Card.Content>
-      </Card>
+      <View
+        style={{
+          margin: 8,
+          marginTop: 0,
+          flex: 1
+        }}
+      >
+        <Card style={{ alignSelf: "stretch" }}>
+          <Card.Content>
+            <Paragraph>{body}</Paragraph>
+          </Card.Content>
+        </Card>
+      </View>
     </View>
   );
 };
