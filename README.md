@@ -24,3 +24,7 @@ This project was created in order to reproduce the popToTop tab bar issues, whic
 ## Installation guide
 
 Clone this repo and navigate within the project directory. Then install the third party dependencies (I used yarn but you are free to use npm) and then start the metro bundler and simulator (See: [Running your React Native application ](https://facebook.github.io/react-native/docs/getting-started#running-your-react-native-application-1)for help)
+
+## Notes
+To disable screens, set the `USE_SCREENS` flag in the src/config.js file to `false`
+
