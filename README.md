@@ -1,6 +1,6 @@
 # Project description
 
-This project was created in order to reproduce the popToTop tab bar issues, which were discovered when using react-navigation together with react-native-screens (See: [Issue]()).
+This project was created in order to reproduce the popToTop tab bar issues, which were discovered when using react-navigation together with react-native-screens (See: [Issue](https://github.com/kmagiera/react-native-screens/issues/78)).
 
 ### iOS Videos
 
