@@ -21,7 +21,7 @@ DerivedData
 *.ipa
 *.xcuserstate
 project.xcworkspace
-project.pbx
+ios/TabStackScreens.xcodeproj/project.pbx
 
 # Android/IntelliJ
 #
