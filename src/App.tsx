@@ -4,9 +4,11 @@ import { useScreens } from "react-native-screens";
 
 import NavigationService from "./navigators/NavigationService";
 import BottomTab from "./navigators/BottomTab";
+import { USE_SCREENS } from "./config";
 
-// Uncomment to use react-native-screens
-// useScreens();
+if (USE_SCREENS) {
+  useScreens();
+}
 
 const AppContainer = createAppContainer(BottomTab);
 
