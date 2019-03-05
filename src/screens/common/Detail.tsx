@@ -11,6 +11,7 @@ import { Post } from "./Post";
 import { Surface } from "react-native-paper";
 import { CommentList } from "./CommentList";
 import { View } from "react-native";
+import { MAKE_NETWORK_REQUESTS } from "../../config";
 
 interface IComponentProps {
   onAuthorPress: (userId: number) => void;
@@ -39,7 +40,9 @@ class Detail extends React.Component<DetailProps, IState> {
   }
 
   public componentDidMount() {
-    this.fetchPostAndComments();
+    if (MAKE_NETWORK_REQUESTS) {
+      this.fetchPostAndComments();
+    }
   }
 
   public render() {

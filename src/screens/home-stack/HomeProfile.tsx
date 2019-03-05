@@ -7,6 +7,8 @@ import { View } from "react-native";
 import NavigationService from "../../navigators/NavigationService";
 import { NavigationRouteId, NavigationParameterKey } from "../../navigators";
 import { NavigationScreenProps } from "react-navigation";
+import { MAKE_NETWORK_REQUESTS } from "../../config";
+import PushScreen from "../common/PushScreen";
 
 interface IState {
   profile?: IUser;
@@ -22,10 +24,23 @@ export class HomeProfile extends React.Component<HomeProfileProps, IState> {
   }
 
   public componentDidMount() {
-    this.fetchProfileAndPosts();
+    if (MAKE_NETWORK_REQUESTS) {
+      this.fetchProfileAndPosts();
+    }
   }
 
   public render() {
+    if (!MAKE_NETWORK_REQUESTS) {
+      return (
+        <PushScreen
+          buttonText={"Push to Detail"}
+          text={"Profile"}
+          navigationStackKey={NavigationRouteId.BottomTabHome}
+          detailPageRouteId={NavigationRouteId.HomeStackDetail}
+        />
+      );
+    }
+
     if (!this.state.profile) return null;
 
     return (

@@ -5,6 +5,8 @@ import { api } from "../../api/PlaceholderApi";
 import { View } from "react-native";
 import NavigationService from "../../navigators/NavigationService";
 import { NavigationRouteId, NavigationParameterKey } from "../../navigators";
+import { MAKE_NETWORK_REQUESTS } from "../../config";
+import PushScreen from "../common/PushScreen";
 
 interface IState {
   profile?: IUser;
@@ -20,10 +22,23 @@ class Account extends React.Component<{}, IState> {
   }
 
   public componentDidMount() {
-    this.fetchProfileAndPosts();
+    if (MAKE_NETWORK_REQUESTS) {
+      this.fetchProfileAndPosts();
+    }
   }
 
   public render() {
+    if (!MAKE_NETWORK_REQUESTS) {
+      return (
+        <PushScreen
+          buttonText={"Push to detail"}
+          text={"Account"}
+          navigationStackKey={NavigationRouteId.BottomTabAccount}
+          detailPageRouteId={NavigationRouteId.AccountStackDetail}
+        />
+      );
+    }
+
     if (!this.state.profile) return null;
 
     return (
