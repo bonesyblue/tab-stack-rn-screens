@@ -4,10 +4,10 @@ This project was created in order to reproduce the popToTop tab bar issues, whic
 
 ### iOS Videos
 
-| with screens                                                                                                | without screens                                                                                                |
-|-------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------|
-| [![iOS with screens](https://img.youtube.com/vi/0EihSu5pwtQ/hqdefault.jpg)](https://youtu.be/0EihSu5pwtQ)   | [![iOS without screens](https://img.youtube.com/vi/A2Nt-goAsfI/hqdefault.jpg)](https://youtu.be/A2Nt-goAsfI)   |
-| ----------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| with screens                                                                                              | without screens                                                                                              |
+|-----------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------|
+| [![iOS with screens](https://img.youtube.com/vi/0EihSu5pwtQ/hqdefault.jpg)](https://youtu.be/0EihSu5pwtQ) | [![iOS without screens](https://img.youtube.com/vi/A2Nt-goAsfI/hqdefault.jpg)](https://youtu.be/A2Nt-goAsfI) |
+
 
 
 
@@ -16,10 +16,10 @@ This project was created in order to reproduce the popToTop tab bar issues, whic
 
 ### Android Videos
 
-| with screens                                                                                                    | without screens                                                                                                    |
-|-----------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------|
-| [![Android with screens](https://img.youtube.com/vi/_a6VhC35D2g/hqdefault.jpg)](https://youtu.be/_a6VhC35D2g)   | [![Android without screens](https://img.youtube.com/vi/o3zbLNXVl44/hqdefault.jpg)](https://youtu.be/o3zbLNXVl44)   |
-| --------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------ |
+| with screens                                                                                                  | without screens                                                                                                  |
+|---------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------|
+| [![Android with screens](https://img.youtube.com/vi/_a6VhC35D2g/hqdefault.jpg)](https://youtu.be/_a6VhC35D2g) | [![Android without screens](https://img.youtube.com/vi/o3zbLNXVl44/hqdefault.jpg)](https://youtu.be/o3zbLNXVl44) |
+
 
 ## Installation guide
 
